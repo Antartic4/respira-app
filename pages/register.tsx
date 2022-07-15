@@ -91,17 +91,17 @@ const Register = () => {
                 placeholder='Usuario'/>
               {errors.username && (<span className='helper-text red-text'>{errors.username.message}</span>)}
             </div>
-              <div className="input-field col s6">
-                <input 
-                  id="password" 
-                  type="text" 
-                  className='validate'
-                  name="password" 
-                  {...register('password')}
-                  placeholder='Clave'
-                  //required
-                  />
-                {errors.password && (<span className="helper-text red-text"> {errors.password.message}</span>)}
+            <div className="input-field col s6">
+              <input 
+                id="password" 
+                type="text" 
+                className='validate'
+                name="password" 
+                {...register('password')}
+                placeholder='Clave'
+                //required
+                />
+                  {errors.password && (<span className="helper-text red-text"> {errors.password.message}</span>)}
               </div>
             </div>
 
@@ -118,37 +118,61 @@ const Register = () => {
                   placeholder='Nombre'
                   //required
                   />
-                  {
-                      errors.name 
-                                    && 
-                                    (
-                                        <span className='helper-text red-text'>{errors.name.message}</span>
-                                    )
-                                }
-                            </div>
-                            <div className="input-field col s6">
-                                <input 
-                                id="email" 
-                                type="text" 
-                                className='validate'
-                                name="email" 
-                                {...register('email')}
-                                placeholder='Email'
-                                //required
-                                />
-                                    {errors.email && (
-                                <span className="helper-text red-text">
-                                    {errors.email.message}
-                                </span>
-                                )}
-                            </div>
-                            <div className="input-field col s6">
+                  {errors.name && (<span className='helper-text red-text'>{errors.name.message}</span>)}
+                </div>
+                
+              <div className="input-field col s6">
+                <input 
+                id="email" 
+                type="text" 
+                className='validate'
+                name="email" 
+                {...register('email')}
+                placeholder='Email'
+                //required
+                />
+
+                  {errors.email && (<span className="helper-text red-text">{errors.email.message}</span>)}
+                </div>
+              </div>
+
+          {/* AQUI EMPIEZA LA FILA DE Edad / Direccion */}         
+
+          <div className="row">
+              <div className="input-field col s6">
+                <input 
+                  id="address" 
+                  type="text" 
+                  className="validate"
+                  name="address" 
+                  {...register('address')}
+                  placeholder='Direccion'
+                  //required
+                  />
+                  {errors.address && (<span className='helper-text red-text'>{errors.address.message}</span>)}
+                </div>
+                
+              <div className="input-field col s6">
+                <input 
+                id="age" 
+                type="text" 
+                className='validate'
+                name="age" 
+                {...register('age')}
+                placeholder='Edad'
+                //required
+                />
+
+                  {errors.age && (<span className="helper-text red-text">{errors.age.message}</span>)}
+                </div>
+            </div>
+                
+                <div className="input-field col s12">
                                 <button 
                                 className='btn blue waves-effect waves-light'
                                 type='submit'>Iniciar
                                 </button>
                             </div>
-                        </div>
                     </form>
                 </div>
     
