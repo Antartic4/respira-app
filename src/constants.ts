@@ -1,0 +1,1 @@
+export const requireValidationMessage = `Se requiere un`;
