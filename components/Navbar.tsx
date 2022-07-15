@@ -6,9 +6,9 @@ const Navbar = () => {
         <nav className='black'>
             <div className="nav-wrapper">
                 <div className="container">
-                <a href='/' className='brand-logo'>
+                <Link href='/' className='brand-logo'>
                     Respira
-                </a>
+                </Link>
                 <ul className='right'>
                     <li>
                         <Link href="/login">
